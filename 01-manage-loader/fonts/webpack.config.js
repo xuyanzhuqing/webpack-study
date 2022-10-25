@@ -15,6 +15,10 @@ module.exports  = {
           { loader: 'style-loader', options: { injectType: 'singletonStyleTag' } },
           'css-loader'
         ]
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/resource',
       }
     ]
   }

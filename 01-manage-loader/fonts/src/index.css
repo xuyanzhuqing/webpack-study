@@ -1,3 +1,11 @@
+/* 加载字体 */
+
+@font-face {
+  font-family: 'dnt-font';
+  src: url('./Zapfino.ttf');
+}
+
 .red {
   color: red;
+  font-family: 'dnt-font';
 }

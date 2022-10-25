@@ -1,8 +1,6 @@
 import { join } from 'lodash-es'
 import './index.css'
 
-console.info(blue)
-
 function component() {
   var element = document.createElement('div');
 
