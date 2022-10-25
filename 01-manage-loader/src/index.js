@@ -1,8 +1,10 @@
 import { join } from 'lodash-es'
 import './index.css'
-import styles from './style.css'
+import { blue  } from './style.css'
 import cover from './cover.lazy.css'
 import './cover.link.css'
+
+console.info(blue)
 
 function component() {
   var element = document.createElement('div');

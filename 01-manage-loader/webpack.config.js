@@ -18,11 +18,29 @@ module.exports  = {
           'css-loader'
         ]
       },
+      // {
+      //   test: /\.css$/i,
+      //   exclude: /\.(lazy|link)\.css$/i,
+      //   use: [
+      //     {
+      //       loader: "style-loader",
+      //     },
+      //     {
+      //       loader: "css-loader",
+      //       options: {
+      //         sourceMap: true, // 浏览器源码显示
+      //         modules: {
+      //           namedExport: true,
+      //         },
+      //       },
+      //     },
+      //   ]
+      // },
       {
         test: /\.link\.css$/i,
         use: [
           { loader: 'style-loader', options: { injectType: 'linkTag', attributes: { id: 'test' } } },
-          'file-loader'
+          { loader: 'file-loader', options: { name: '[path][name].[ext]?[contenthash]' } }
         ]
       },
       {
