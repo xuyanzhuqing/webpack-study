@@ -2,8 +2,8 @@
   "name": "webpack-study",
   "version": "1.0.0",
   "scripts": {
-    "prebuild": "ln -s ../node_modules",
-    "build": "webpack --config ./webpack.config.js"
+    "ln": "ln -s ../node_modules",
+    "build": "webpack --config ./webpack.config.js && serve ./dist"
   },
   "keywords": [],
   "author": "",

@@ -9,10 +9,19 @@ module.exports  = {
   module: {
     rules: [
       {
-        test: /\.css$/,
+        test: /\.css$/i,
+        exclude: /\.lazy\.css$/i,
         use: [
           // https://juejin.cn/post/7024320441342754846
-          'style-loader',
+          // { loader: 'style-loader', options: { injectType: 'styleTag' } }, // 单个内联加载
+          { loader: 'style-loader', options: { injectType: 'singletonStyleTag' } }, // 合并一处内联加载
+          'css-loader'
+        ]
+      },
+      {
+        test: /\.lazy\.css$/i,
+        use: [
+          { loader: 'style-loader', options: { injectType: 'lazyStyleTag' } },
           'css-loader'
         ]
       }
