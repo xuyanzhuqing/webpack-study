@@ -15,6 +15,10 @@ module.exports  = {
           { loader: 'style-loader', options: { injectType: 'singletonStyleTag' } },
           'css-loader'
         ]
+      },
+      {
+        test: /\.(png|jif|jpeg|jpg||svg|)$/i,
+        type: 'asset/resource'
       }
     ]
   }
