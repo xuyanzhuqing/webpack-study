@@ -2,6 +2,7 @@ import { join } from 'lodash-es'
 import './index.css'
 import styles from './style.css'
 import cover from './cover.lazy.css'
+import './cover.link.css'
 
 function component() {
   var element = document.createElement('div');
