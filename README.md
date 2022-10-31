@@ -9,3 +9,4 @@ todo
 - https://www.npmjs.com/search?ranking=popularity&q=HtmlWebpackPlugin
 - https://www.npmjs.com/package/webpack-dev-middleware
 - https://www.npmjs.com/package/webpack-dev-server
+- https://babeljs.io/docs/en/babel-preset-env.html
