@@ -1,4 +1,4 @@
-import 'babel-polyfill';
+// import 'babel-polyfill';
 import { join } from 'lodash-es'
 function component () {
   const div = document.createElement('div')
