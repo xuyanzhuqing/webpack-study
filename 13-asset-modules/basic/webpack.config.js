@@ -53,7 +53,27 @@ module.exports = {
           //   return !content.includes('welcome');
           // },
         }
-      }
+      },
+      {
+        test: /\.ya?ml$/,
+        use: 'yaml-loader'
+      },
+      {
+        test: /\.css$/,
+        oneOf: [ // 只会采用
+          {
+            resourceQuery: /inline/, // foo.css?inline  内联加载
+            use: ['style-loader', 'css-loader'],
+          },
+          {
+            resourceQuery: /external/, // foo.css?external 外链加载
+            use: [
+              { loader: 'style-loader', options: { injectType: 'linkTag', attributes: { id: 'test' } } },
+              { loader: 'file-loader', options: { name: '[path][name].[ext]?[contenthash]' } }
+            ]
+          },
+        ],
+      },
     ]
   }
 }
