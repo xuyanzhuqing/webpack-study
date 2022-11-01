@@ -10,3 +10,5 @@ todo
 - https://www.npmjs.com/package/webpack-dev-middleware
 - https://www.npmjs.com/package/webpack-dev-server
 - https://babeljs.io/docs/en/babel-preset-env.html
+- https://www.ruanyifeng.com/blog/2018/07/web-worker.html
+- https://vue-loader.vuejs.org/guide/
