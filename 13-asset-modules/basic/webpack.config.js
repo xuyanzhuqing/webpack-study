@@ -16,6 +16,7 @@ module.exports = {
    })
   ],
   module: {
+    // https://webpack.docschina.org/guides/asset-modules/
     rules: [
       {
         test: /\.(png|jpg)$/,
@@ -27,7 +28,31 @@ module.exports = {
       {
         test: /\.svg$/,
         type: 'asset/inline', // 打包在 bundle 中
+        exclude: /\.min\.svg$/
         // type: 'asset/resource',
+      },
+      {
+        test: /\.min\.svg$/,
+        type: 'asset/inline',
+        generator: {
+          dataUrl: content => {
+            return svgToMiniDataURI(content.toString()) // 自定义 svg 压缩算法
+          }
+        }
+      },
+      {
+        test: /\.txt$/,
+        type: 'asset', //根据条件在resource/inline中切换
+        parser: {
+          dataUrlCondition: {
+            maxSize: 4 // byte default 8 * 1024 byte 超过多少字符就单独打包
+          }
+          // dataUrlCondition: (source, { filename, module }) => {
+          //   const content = source.toString();
+          //   console.info(content)
+          //   return !content.includes('welcome');
+          // },
+        }
       }
     ]
   }
