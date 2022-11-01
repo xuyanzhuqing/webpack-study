@@ -1,0 +1,19 @@
+{
+  "name": "00-tempalte",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --config ./webpack.config.js  --env goal=local --env production --progress"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "lodash-es": "^4.17.21",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "html-webpack-plugin": "^5.5.0"
+  }
+}
