@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack --config ./webpack.config.js  --env goal=local --env production --progress",
-    "build": "webpack --config ./webpack.config.js  --env goal=local --env production --progress --env ASSET_PATH=./"
+    "build": "webpack --config ./webpack.config.js  --env goal=local --env production --progress --env ASSET_PATH=./",
+    "buildCDN": "webpack --config ./webpack.config.js  --env goal=local --env production --progress --env ASSET_PATH=https://cdn.example.com/assets/"
   },
   "keywords": [],
   "author": "",
